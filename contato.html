@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Contato</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre o Curso</a></li>
+            <li><a href="cadastro.html">Cadastro de Participante</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Entre em Contato Conosco</h2>
+            <p>Se você tiver alguma dúvida ou precisa de mais informações, preencha o formulário abaixo e entraremos em contato o mais breve possível.</p>
+            <form action="contato_processa.php" method="POST">
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+                </div>
+
+                <div>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required placeholder="Seu e-mail">
+                </div>
+
+                <div>
+                    <label for="assunto">Assunto:</label>
+                    <textarea id="assunto" name="assunto" required placeholder="Escreva sua mensagem"></textarea>
+                </div>
+
+                <div>
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p><a href="index.html">← Voltar ao início</a></p>
+        <p>&copy; 2025 Feira Tecnológica. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
