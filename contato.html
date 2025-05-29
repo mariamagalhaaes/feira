@@ -2,9 +2,11 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <title>Contato - Feira Tecnológica</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <form method="POST" action="php/contato.php" class="formulario">
+
 </head>
 <body>
     <header>
@@ -14,41 +16,44 @@
     <nav>
         <ul>
             <li><a href="index.html">Início</a></li>
-            <li><a href="sobre.html">Sobre o Curso</a></li>
-            <li><a href="cadastro.html">Cadastro de Participante</a></li>
+            <li><a href="participante.html">Participantes</a></li>
+            <li><a href="cadastro.html">Palestras</a></li>
             <li><a href="contato.html">Contato</a></li>
+            <li><a href="mapa.html">Mapa</a></li>
         </ul>
     </nav>
 
+    <a href="index.html" class="botao-voltar">← Voltar</a>
+
     <main>
         <section>
-            <h2>Entre em Contato Conosco</h2>
-            <p>Se você tiver alguma dúvida ou precisa de mais informações, preencha o formulário abaixo e entraremos em contato o mais breve possível.</p>
-            <form action="contato_processa.php" method="POST">
-                <div>
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
-                </div>
+            <h2>Informações de Contato</h2>
+            <p><strong>Email:</strong> feiratecnologia@gmail.com</p>
+            <p><strong>Telefone:</strong> (11) 4002-8922</p>
+            <p><strong>Endereço:</strong> Rua das Inovações, 1095 - Bairro Futuro,Roseta - CEP 78665-567</p>
+        </section>
 
-                <div>
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" required placeholder="Seu e-mail">
-                </div>
+        <section>
+            <h2>Fale Conosco</h2>
 
-                <div>
-                    <label for="assunto">Assunto:</label>
-                    <textarea id="assunto" name="assunto" required placeholder="Escreva sua mensagem"></textarea>
-                </div>
+            <form method="POST" action="contato.php" class="formulario">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
 
-                <div>
-                    <button type="submit">Enviar</button>
-                </div>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+                <button type="submit">Enviar Mensagem</button>
             </form>
         </section>
+
+
     </main>
 
     <footer>
-        <p><a href="index.html">← Voltar ao início</a></p>
         <p>&copy; 2025 Feira Tecnológica. Todos os direitos reservados.</p>
     </footer>
 </body>

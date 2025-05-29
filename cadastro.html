@@ -4,52 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Participante</title>
-    <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Cadastro de Participante</h1>
+        <h1>Cadastro de Palestras</h1>
     </header>
     <nav>
         <ul>
             <li><a href="index.html">Início</a></li>
-            <li><a href="sobre.html">Sobre o Curso</a></li>
-            <li><a href="cadastro.html">Cadastro de Participante</a></li>
+            <li><a href="participante.html">Participante</a></li>
+            <li><a href="cadastro.html">Palestras</a></li>
             <li><a href="contato.html">Contato</a></li>
+            <li><a href="mapa.html">Mapa</a></li>
         </ul>
     </nav>
+    <a href="index.html" class="botao-voltar">← Voltar</a>
 
     <main>
-        <section>
-            <h2>Preencha os dados abaixo para se cadastrar:</h2>
-            <form action="cadastro_processa.php" method="POST">
-                <div>
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
-                </div>
+        <form action="php/cadastro_palestra.php" method="POST" class="formulario">
+            <label for="nome">Nome da Palestra:</label>
+            <input type="text" id="nome" name="nome" required>
 
-                <div>
-                    <label for="sobrenome">Sobrenome:</label>
-                    <input type="text" id="sobrenome" name="sobrenome" required placeholder="Digite seu sobrenome">
-                </div>
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" name="descricao" rows="4" required></textarea>
 
-                <div>
-                    <label for="nascimento">Data de Nascimento:</label>
-                    <input type="date" id="nascimento" name="nascimento" required>
-                </div>
+            <label for="palestrante">Palestrante:</label>
+            <input type="text" id="palestrante" name="palestrante" required>
 
-                <div>
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
-                </div>
+            <label for="horario">Horário:</label>
+            <input type="time" id="horario" name="horario" required>
 
-                <div>
-                    <button type="submit">Cadastrar</button>
-                </div>
-            </form>
-        </section>
+            <button type="submit">Cadastrar Palestra</button>
+        </form>
     </main>
-
+ 
     <footer>
 
         <p>&copy; 2025 Feira Tecnológica. Todos os direitos reservados.</p>

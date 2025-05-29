@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Feira de Tecnologia</title>
+</head>
+
+        </head>
+        <body>
+            <header>
+                <h1>Cadastro de Participante</h1>
+            </header>
+        
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li> <a href="participante.html"> Participante</a>
+                    </li>
+                    <li><a href="cadastro.html">Palestras</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="mapa.html">Mapa</a></li>
+                </ul>
+            </nav>
+            <a href="index.html" class="botao-voltar">← Voltar</a>
+
+            <main>
+                <form action="php/participante.php" method="POST" class="formulario">
+                    <label for="nome">Nome completo:</label>
+                    <input type="text" id="nome" name="nome" required>
+        
+                    <label for="idade">Idade:</label>
+                    <input type="number" id="idade" name="idade" min="1" required>
+        
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+    
+        
+                    <label for="tipo">Você é:</label>
+                    <select id="tipo" name="tipo" ></select> required>
+                        <option value="">-- Selecione --</option>
+                        <option value="Aluno">Aluno</option>
+                        <option value="Pai ou Responsável">Pai ou Responsável</option>
+                    </select>
+        
+                    <label id="label-documento" for="documento">Documento:</label>
+                    <input type="text" id="documento" name="documento" required>
+        
+                    <button type="submit">Cadastrar</button>
+                </form>
+        
+
+            </main>
+        
+            <footer>
+                <p>&copy; 2025 Feira Tecnológica. Todos os direitos reservados.</p>
+            </footer>
+        </body>
+        </html>
+        

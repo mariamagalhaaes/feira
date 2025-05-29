@@ -1,0 +1,223 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+
+:root {
+  --bg-dark: #0d1117;
+  --bg-panel: #161b22;
+  --accent-1: #58a6ff;
+  --accent-2: #56d364;
+  --text-light: #c9d1d9;
+  --text-muted: #8b949e;
+  --radius: 8px;
+  --transition: 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  padding: 2rem 1rem;
+  text-align: center;
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+header p {
+  margin-top: 0.5rem;
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+
+nav {
+  background-color: var(--bg-panel);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+nav li {
+  margin: 0.5rem 1rem;
+}
+
+nav a {
+  position: relative;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.5rem 0;
+  transition: color var(--transition);
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--accent-1);
+  transition: width var(--transition);
+}
+
+nav a:hover {
+  color: var(--accent-1);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+
+main {
+  flex: 1;
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+section {
+  background-color: var(--bg-panel);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+h2 {
+  color: var(--accent-2);
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+p {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+strong {
+  color: var(--accent-1);
+}
+
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario label {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: var(--text-muted);
+}
+
+.formulario input,
+.formulario textarea,
+.formulario select {
+  margin-top: 0.3rem;
+  padding: 0.7rem;
+  background: #0d1117;
+  border: 1px solid var(--text-muted);
+  border-radius: var(--radius);
+  color: var(--text-light);
+  font-size: 1rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.formulario input:focus,
+.formulario textarea:focus,
+.formulario select:focus {
+  outline: none;
+  border-color: var(--accent-1);
+  box-shadow: 0 0 5px var(--accent-1);
+}
+
+.formulario button {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.2rem;
+  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+  border: none;
+  border-radius: var(--radius);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.formulario button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.botao-voltar {
+  display: inline-block;
+  margin-top: 2rem;
+  color: var(--accent-2);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color var(--transition);
+}
+
+.botao-voltar:hover {
+  color: var(--accent-1);
+  text-decoration: underline;
+}
+
+
+footer {
+  background-color: var(--bg-panel);
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+
+
+
+.mapa img {
+  max-height: 700px;
+  max-width: 800px;
+}
+
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+}
